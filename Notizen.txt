@@ -1,0 +1,19 @@
+
+Property-Modell (selbst definieren oder bestehende nutzen)
+
+Binding bidirektional UND mit Bindings-Klassen z.B. StringBindung.concat
+
+die meisten Uni's haben mittlerweile auf JavaFX gewechselt, weil moderner
+
+Verwendung von Lambdas und moderner Java-8-Technologien bevorzugt
+
+
+Fancy Zeug:
+	Transitions, Timelines, AnimationTimer
+	CSS
+	Touchscreen Funktionalität
+	Effects und Transform (z.B. Rotieren)
+
+Scene Builder
+
+	
