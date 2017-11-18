@@ -1,0 +1,32 @@
+1. Historisches
+    Entwicklung bis Java 8,
+    Weiterentwicklung nach Java 8 (siehe Zukunftsplan von Oracle)
+    mit Ausblick auf die Zukunft, dass JavaFX Swing ersetzt, hier evtl. die Google Charts einblenden
+    Hinweise JavaFX unter Eclipse
+    evtl. Hinweis auf Nutzung des OracleJDK statt OpenJDK unter Linux
+2. Aufbau einer Applikation
+    Aufbau einer JavaFX-App (Stage -> Scene -> Parent)
+    obligatorisches HelloWorld -Beispiel
+3. Prinzip von Properties von Binding
+    Erklärung Properties und Binding
+    simples Binding-Beispiel(z.B. gleicher Text in Textfeld und Label in einer Zeile
+    bidirektionales Binding zwischen zwei Komponenten(können auch unterschiedliche Klassen sein)
+    eigene Listener für Properties --> Achtung hier kommen Lambdas zum Einsatz (oder sollten zumindest)
+        <Property>.addListener(
+            observable, oldValue, newValue -> {
+                //doing something awesome
+            }
+        );
+4. Komponenten
+    prinzipiell die gleichen wie ÁWT oder Swing.
+    Namen entsprechen oft denen von AWT(Achtung beim Importieren der Abhängigkeiten)
+    hier bietet sich eine Kurzübersicht an (Button, TextField, Checkbox, ... , BorderPane, GridPane, VBox, HBox, ...)
+5. Fancy Stuff (ich würde es auch so nennen)
+    Touch-Funktionalität
+    Effekte, Animationen,...
+    CSS-Styling (entweder über CSS-File oder direkt innerhalb der Komponente (<Komponente>.setStyle("-fx-...")
+[6. Charts]
+    LineChart, Barchart, PieChart
+    kleines Programmbeispiel
+[7. FXML und Scenebuilder]
+    Beispiel wie man im SceneBuilder eine Form baut und dazu die Controller-Klasse implementiert
