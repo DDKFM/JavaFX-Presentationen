@@ -1,4 +1,4 @@
-package de.ddkfm;
+package de.ddkfm.demoapp;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

@@ -1,4 +1,4 @@
-package de.ddkfm;
+package de.ddkfm.demoapp;
 
 import com.aquafx_project.AquaFx;
 import javafx.beans.value.ChangeListener;

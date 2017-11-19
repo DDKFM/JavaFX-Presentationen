@@ -5,7 +5,7 @@
     Hinweise JavaFX unter Eclipse
     evtl. Hinweis auf Nutzung des OracleJDK statt OpenJDK unter Linux
 2. Aufbau einer Applikation
-    Aufbau einer JavaFX-App (Stage -> Scene -> Parent)
+    Aufbau einer JavaFX-App (Stage -> Scene -> Node)
     obligatorisches HelloWorld -Beispiel
 3. Prinzip von Properties von Binding
     Erklärung Properties und Binding
