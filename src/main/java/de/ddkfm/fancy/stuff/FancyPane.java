@@ -17,7 +17,7 @@ public class FancyPane extends Pane {
     public FancyPane() {
         this.setOnMouseClicked(event -> {
             if(event.getClickCount() >= 2) {
-                int randomInt = new Random().nextInt(4);
+                int randomInt = new Random().nextInt(2);
                 double randomDouble1 = new Random().nextDouble() * 100;
                 double randomDouble2 = new Random().nextDouble() * 100;
                 double x = event.getSceneX();
@@ -30,12 +30,6 @@ public class FancyPane extends Pane {
                     case 1:
                         shape = new Ellipse(x, y, randomDouble1, randomDouble2);
                         break;
-                    case 2:
-                        shape = new Arc(x, y, randomDouble1, randomDouble2, 0, 100);
-                        break;
-                    case 3:
-                        shape = new Polygon(randomDouble1, randomDouble2, randomDouble1 - 5, randomDouble2 - 50);
-                        break;
                 }
                 int r = new Random().nextInt(256);
                 int g = new Random().nextInt(256);
@@ -46,6 +40,7 @@ public class FancyPane extends Pane {
                     shape.setOnMousePressed(e -> {
                         this.setXYValue(finalShape, e.getSceneX(), e.getSceneY());
                     });
+
                     shape.setOnMouseDragged(e -> {
                         double offsetX = e.getSceneX() - this.oldXYValues.get(finalShape).getKey();
                         double offsetY = e.getSceneY() - this.oldXYValues.get(finalShape).getValue();
