@@ -1,6 +1,8 @@
 package de.ddkfm.fancy.stuff;
 
 import javafx.scene.control.Button;
+import javafx.scene.effect.BlendMode;
+import javafx.scene.effect.Reflection;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
@@ -58,12 +60,58 @@ public class FancyPane extends Pane {
                     shape.setOnRotate(e -> {
                         finalShape.setRotate(finalShape.getRotate() + e.getAngle());
                     });
+                    int intValue = new Random().nextInt(10);
+                    BlendMode blendMode = null;
+                    switch(intValue) {
+                        case 0:
+                            blendMode = BlendMode.ADD;
+                            break;
+                        case 1:
+                            blendMode = BlendMode.BLUE;
+                            break;
+                        case 2:
+                            blendMode = BlendMode.COLOR_BURN;
+                            break;
+                        case 3:
+                            blendMode = BlendMode.DARKEN;
+                            break;
+                        case 4:
+                            blendMode = BlendMode.COLOR_DODGE;
+                            break;
+                        case 5:
+                            blendMode = BlendMode.EXCLUSION;
+                            break;
+                        case 6:
+                            blendMode = BlendMode.HARD_LIGHT;
+                            break;
+                        case 7:
+                            blendMode = BlendMode.OVERLAY;
+                            break;
+                        case 8:
+                            blendMode = BlendMode.SOFT_LIGHT;
+                            break;
+                        case 9:
+                            blendMode = BlendMode.LIGHTEN;
+                            break;
+                    }
+                    shape.setBlendMode(blendMode);
                     shapes.add(shape);
                     this.getChildren().add(shape);
                 }
             }
         });
     }
+
+    public void setReflection() {
+        Reflection reflection = new Reflection();
+        reflection.setFraction(0.4);
+        this.shapes.forEach((shape) -> shape.setEffect(reflection));
+    }
+
+    public void removeReflection() {
+        this.shapes.forEach((shape) -> shape.setEffect(null));
+    }
+
     private void setXYValue(Shape shape, double x, double y) {
         if(this.oldXYValues.containsKey(shape)) {
             this.oldXYValues.remove(shape);

@@ -20,24 +20,33 @@ public class FancyExample extends Application {
 
     private Map<Integer, FancyPane> panes = new TreeMap<>();
     private int currentIndex = 0;
+    private boolean withReflection = false;
     @Override
     public void start(Stage primaryStage) throws Exception {
         BorderPane root = new BorderPane();
 
         MenuBar menuBar = new MenuBar();
         Menu menu = new Menu("Anzeige");
-        MenuItem mi = new MenuItem("Vollbild starten");
-        mi.setOnAction(event -> {
+        MenuItem miFullscreen = new MenuItem("Vollbild starten");
+        miFullscreen.setOnAction(event -> {
             if(primaryStage.isFullScreen()) {
                 primaryStage.setFullScreen(false);
             } else {
                 primaryStage.setFullScreen(true);
-                mi.setText("Vollbild beenden");
+                miFullscreen.setText("Vollbild beenden");
             }
         });
-        mi.setAccelerator(new KeyCodeCombination(KeyCode.F, KeyCombination.CONTROL_DOWN));
+        miFullscreen.setAccelerator(new KeyCodeCombination(KeyCode.F, KeyCombination.CONTROL_DOWN));
+        MenuItem miReflection = new MenuItem("Mit Reflection-Effekt");
+        miReflection.setOnAction(event -> {
+            if(withReflection)
+                this.panes.get(currentIndex).removeReflection();
+            else
+                this.panes.get(currentIndex).setReflection();
+            withReflection = !withReflection;
+        });
 
-        menu.getItems().add(mi);
+        menu.getItems().addAll(miFullscreen, miReflection);
         menuBar.getMenus().add(menu);
         root.setTop(menuBar);
         FancyPane pane = new FancyPane();
