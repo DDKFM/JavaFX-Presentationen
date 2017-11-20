@@ -18,7 +18,7 @@ public class BindingExample extends Application{
 
         //create an inital Person named Max Mustermann
         Person person  = new Person("Max Mustermann",
-                                    LocalDate.of(1996, 8, 9),
+                                    LocalDate.of(1996, 8, 9),//LocalDate API est. with Java 8
                                     500);
 
         PersonPane personPane = new PersonPane(person);
