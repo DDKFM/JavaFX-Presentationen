@@ -21,18 +21,6 @@ public class Person {
         this.income.set(income);
     }
 
-    public int getAge() {
-        return age.get();
-    }
-
-    public IntegerProperty ageProperty() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age.set(age);
-    }
-
     public String getName() {
         return name.get();
     }
@@ -43,6 +31,18 @@ public class Person {
 
     public void setName(String name) {
         this.name.set(name);
+    }
+
+    public int getAge() {
+        return age.get();
+    }
+
+    public IntegerProperty ageProperty() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age.set(age);
     }
 
     public LocalDate getBirthday() {

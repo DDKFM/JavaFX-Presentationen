@@ -1,5 +1,6 @@
 package de.ddkfm.css.demo;
 
+import com.aquafx_project.AquaFx;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -11,6 +12,7 @@ public class CSSDemo extends Application {
     public void start(Stage primaryStage) throws Exception {
         BorderPane root = (BorderPane) FXMLLoader.load(this.getClass().getResource("CSSDemo.fxml"));
         Scene scene = new Scene(root);
+
         primaryStage.setScene(scene);
         primaryStage.show();
     }

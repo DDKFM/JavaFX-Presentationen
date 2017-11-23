@@ -22,6 +22,7 @@ public class CSSDemoController implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        taCSS.setStyle("-fx-fill: black");
         btApplyStyle.setOnAction(event -> {
             Scene scene = btApplyStyle.getScene();
             String cssContent = taCSS.getText();

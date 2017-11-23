@@ -39,7 +39,7 @@ public class PersonPane extends GridPane{
         this.add(new Label("Kind der 90er"), 0, 3, 3, 1);
         this.add(cbIs90Kid, 1, 3);
 
-        //Doing some JVM-Magic by binding a StringProperty to a DoubleProperty via a corresponding Converter-Class
+        //doing some JVM-Magic by binding a StringProperty to a DoubleProperty via a corresponding Converter-Class
         Bindings.bindBidirectional(fieldIncome.textProperty(), this.person.incomeProperty(), new NumberStringConverter());
 
         this.add(new Label("Einkommen: "), 0, 4, 3, 1);

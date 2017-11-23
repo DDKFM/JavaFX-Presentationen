@@ -37,6 +37,7 @@ public class FancyExample extends Application {
             }
         });
         miFullscreen.setAccelerator(new KeyCodeCombination(KeyCode.F, KeyCombination.CONTROL_DOWN));
+
         MenuItem miReflection = new MenuItem("Mit Reflection-Effekt");
         miReflection.setOnAction(event -> {
             if(withReflection)
