@@ -18,14 +18,17 @@ public class PersonPane extends GridPane{
         this.person = person;
 
         fieldName.textProperty().bindBidirectional(this.person.nameProperty());
+
         this.add(new Label("Name: "), 0, 0);
         this.add(fieldName, 1, 0);
 
         dpBirthday.valueProperty().bindBidirectional(this.person.birthdayProperty());
+
         this.add(new Label("Geburtstag"), 0, 1);
         this.add(dpBirthday, 1, 1);
 
         fieldAge.textProperty().bind(this.person.ageProperty().asString());
+
         this.add(new Label("Alter: "), 0, 2);
         this.add(fieldAge, 1, 2);
 
